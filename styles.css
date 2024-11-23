@@ -1,0 +1,131 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .landing-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('img3.jpg') no-repeat center center/cover; /* Background image */
+  }
+  
+  /* Box Styling */
+  .animated-box {
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 30px 50px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Welcome Text Animation */
+  #welcome-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3A5F0B;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  /* Typing Animation for English Paragraph */
+  #english-paragraph, #urdu-paragraph {
+    font-size: 1.8rem;
+    color: #444;
+    text-align: justify;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000;
+  }
+  
+  #english-paragraph {
+    animation: typing 5s steps(50) forwards;
+  }
+  
+  /* Urdu Paragraph Styling */
+  #urdu-paragraph {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    direction: rtl;
+    text-align: right;
+    animation: typingUrdu 7s steps(50) forwards;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) { /* For tablets and smaller laptops */
+    #english-paragraph, #urdu-paragraph {
+      font-size: 1.5rem; /* Adjusted font size */
+      line-height: 2rem;
+      padding: 0 10px;
+    }
+  
+    #urdu-paragraph {
+      line-height: 2.2rem; /* Slight adjustment for Urdu text readability */
+    }
+  }
+  
+  @media (max-width: 768px) { /* For mobile devices */
+    #english-paragraph, #urdu-paragraph {
+      font-size: 1.2rem; /* Smaller font size for mobiles */
+      line-height: 1.8rem;
+      padding: 0 5px;
+    }
+  
+    .animated-box {
+      padding: 20px 30px; /* Reduced padding for smaller screens */
+    }
+  
+    #welcome-text {
+      font-size: 2rem; /* Reduced font size for welcome text */
+    }
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.5);
+    }
+    to {
+      text-shadow: 4px 4px 12px rgba(255, 255, 255, 1);
+    }
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes typingUrdu {
+    from {
+      height: 0;
+    }
+    to {
+      height: 100%;
+    }
+  }
+  
